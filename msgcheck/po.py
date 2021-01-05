@@ -180,7 +180,7 @@ class PoMessage(object):
                 continue
             puncts = [(':', ':'), (';', ';'), (',', ','), ('...', '...')]
             # special symbols in some languages
-            if language.startswith('ja'):
+            if language[:2] in ['ja', 'zh']:
                 puncts.append(('.', '。'))
             else:
                 puncts.append(('.', '.'))
